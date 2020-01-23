@@ -14,11 +14,10 @@ using namespace std;
 
 class Member 
 { public: 
-   string Name;
+   string Name, Address;
    int Age;
-   int PhoneNumber;
-   string Address;
-   int Salary;
+   double PhoneNumber;
+   float Salary;
   
    void printSalary()
    {
@@ -34,7 +33,8 @@ class Member
      cout<<"\nEnter Phone Number:";
      cin>>PhoneNumber;
      cout<<"\nEnter Address:";
-     cin>>Address;
+     cin.ignore();
+     getline(cin,Address);
      cout<<"\nEnter Salary:";
      cin>>Salary;
     }
